@@ -1,0 +1,11 @@
+Package: mbrclm
+Type: Package
+Title: Median bias reduction in cumulative link models 
+Version: 0.1.0
+Authors@R: c(person("Vincenzo", "Gioia", email = "vincenzo.gioia@units.it", role = c("aut","cre")))
+Maintainer: Vincenzo Gioia <gioiavincenzo.25790@gmail.com>
+Description: The package offers methods for fittting cumulative link models via maximum likelihood or using the adjusted score functions to mean and median bias reduction.
+Depends: R(>= 3.1)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
