@@ -15,19 +15,16 @@ data(wine)
 n <- nrow(wine)
 y <- matrix(NA, nrow = n, ncol = length(levels(wine$rating_comb3)))
 
-for(i in 1 : n){
-  if(wine$rating_comb3[i] == "1") y[i,]<-c(1, 0, 0)
-  if(wine$rating_comb3[i] == "2 - 4") y[i,] <- c(0, 1, 0)
-  if(wine$rating_comb3[i] == "5") y[i,] <- c(0, 0, 1)
-}
-
+y[wine$rating_comb3 == "1", 1] <- 1
+y[wine$rating_comb3 == "2-4", 2] <- 1
+y[wine$rating_comb3 == "5", 3] <- 1
 
 x <- wine[, c("temp", "contact")]
 X <- cbind(as.numeric(x[, 1]) - 1, as.numeric(x[,2])-1)
-``` 
+```
 
+By fitting via maximum likelihood we obtain 
 ``` r
-## maximum likelihood estimates ##
 fit_ML <- mbrclm(x = X, y = y, type = "AS_ml", link = "logit")
 summary(fit_ML)
 #Coefficients (with logit link):
@@ -44,9 +41,7 @@ summary(fit_ML)
 #
 #Convergence status: TRUE
 ```
-
-
-The median bias reduced estimates can be obtained via
+The maximum likelihood boundary estimates problem is clear. Thus, the median bias reduced estimation approach is able to solve it and the resulting median bias reduced estimates are
 ``` r
 ## median bias-reduced estimates ##
 fit_medianBR <- mbrclm(x = X, y = y, type = "AS_median", link = "logit")
