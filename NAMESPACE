@@ -1,1 +1,4 @@
 exportPattern("^[[:alpha:]]+")
+importFrom(evd, qgev)
+importFrom("stats", "make.link", "pnorm", "printCoefmat", "qlogis",
+               "qnorm")
