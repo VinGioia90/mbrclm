@@ -1,5 +1,5 @@
 # Median bias reduction in cumulative link models 
-This package offers methods for fitting cumulative link models using adjusted score functions, obtaining the median bias reduced estimates bias reduced estimates (Kenne Pagui et al., 2017, 2020). Maximum likelihood estimates can be also carried out. The proposal is illustrated in Gioia et al. (2023). 
+This package offers methods for fitting cumulative link models using adjusted score function for median bias reduction (Kenne Pagui et al., 2017, 2020). The proposal is illustrated in Gioia et al. (2023). 
 
 To install the package use 
 ``` r
@@ -10,7 +10,7 @@ Here, we illustrate the proposal by using a modified version of the `wine` datas
 
 ``` r
 library(mbrclm)
-load("wine.RData")
+data(wine)
 
 n <- nrow(wine)
 y <- matrix(NA, nrow = n, ncol = length(levels(wine$rating_comb3)))
