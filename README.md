@@ -6,7 +6,7 @@ To install the package use
 devtools::install_github("VinGioia90/mbrclm@master")
 ```
 
-Here, we illustrate the proposal by using a modified version of the `wine` dataset available in the `ordinal` package and related to Randall (1989). In this respect, the central categories are merged into a single one. 
+Here, we consider a modified version of the `wine` dataset analyzed in Randall (1989) and available in the `ordinal` R package (Christensen, 2022). In this respect, the central categories are merged into a single one. 
 
 ``` r
 library(mbrclm)
