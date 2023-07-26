@@ -1,4 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+S3method(summary, mbrclm)
 importFrom(evd, qgev)
 importFrom("stats", "make.link", "pnorm", "printCoefmat", "qlogis",
                "qnorm")
