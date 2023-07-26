@@ -14,7 +14,7 @@
 \item{...}{further arguments}
 }
 \value{
-Summary print
+The summary is printed
 }
 \description{
 Such a function allows for printing the results of the fit
