@@ -13,7 +13,7 @@ library(mbrclm)
 data(wine)
 
 n <- nrow(wine)
-y <- matrix(NA, nrow = n, ncol = length(levels(wine$rating_comb3)))
+y <- matrix(0, nrow = n, ncol = length(levels(wine$rating_comb3)))
 
 y[wine$rating_comb3 == "1", 1] <- 1
 y[wine$rating_comb3 == "2-4", 2] <- 1
